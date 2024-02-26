@@ -25,7 +25,7 @@ class StockList(generics.ListCreateAPIView):
 class StockDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Stock.objects.all()
     serializer_class = StockSerializer
-    permission_classes = [IsAdminUser]
+    # permission_classes = [IsAdminUser]
 
     def delete(self, request, *args, **kwargs):
         try:
@@ -53,7 +53,7 @@ class MenuList(generics.ListCreateAPIView):
 class MenuDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
-    permission_classes = [IsAdminUser]
+    # permission_classes = [IsAdminUser]
 
     def delete(self, request, *args, **kwargs):
         try:
@@ -70,7 +70,7 @@ class ProductList(generics.ListCreateAPIView):
 class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    permission_classes = [IsAdminUser]
+    # permission_classes = [IsAdminUser]
 
     def delete(self, request, *args, **kwargs):
         try:
@@ -98,7 +98,7 @@ class SupplierList(generics.ListCreateAPIView):
 class SupplierDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Supplier.objects.all()
     serializer_class = SupplierSerializer
-    permission_classes = [IsAdminUser]
+    # permission_classes = [IsAdminUser]
 
     def delete(self, request, *args, **kwargs):
         try:
@@ -126,7 +126,7 @@ class PurchaseBillList(generics.ListCreateAPIView):
 class PurchaseBillDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = PurchaseBill.objects.all()
     serializer_class = PurchaseBillSerializer
-    permission_classes = [DeleteWithAdminPasswordPermission]
+    # permission_classes = [DeleteWithAdminPasswordPermission]
 
     def delete(self, request, *args, **kwargs):
         try:
@@ -143,7 +143,7 @@ class PurchaseItemList(generics.ListCreateAPIView):
 class PurchaseItemDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = PurchaseItem.objects.all()
     serializer_class = PurchaseItemSerializer
-    permission_classes = [DeleteWithAdminPasswordPermission]
+    # permission_classes = [DeleteWithAdminPasswordPermission]
 
     def delete(self, request, *args, **kwargs):
         try:
@@ -171,7 +171,7 @@ class SalesBillList(generics.ListCreateAPIView):
 class SalesBillDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = SalesBill.objects.all()
     serializer_class = SalesBillSerializer
-    permission_classes = [DeleteWithAdminPasswordPermission]
+    # permission_classes = [DeleteWithAdminPasswordPermission]
 
     def delete(self, request, *args, **kwargs):
         try:
@@ -188,7 +188,7 @@ class SalesItemList(generics.ListCreateAPIView):
 class SalesItemDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = SalesItem.objects.all()
     serializer_class = SalesItemSerializer
-    permission_classes = [DeleteWithAdminPasswordPermission]
+    # permission_classes = [DeleteWithAdminPasswordPermission]
 
     def delete(self, request, *args, **kwargs):
         try:
@@ -214,7 +214,7 @@ class OwnerList(generics.ListCreateAPIView):
 class OwnerDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Owner.objects.all()
     serializer_class = OwnerSerializer
-    permission_classes = [IsAdminUser]
+    # permission_classes = [IsAdminUser]
 
     def delete(self, request, *args, **kwargs):
         try:
